@@ -1,129 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Nav</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="client/css/styles.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo-section">
-        <img src="client/images/lily-be-clean.png" alt="Logo" class="logo" />
-        <span class="brand-name">Lily Be Clean</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Lily Be Clean</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="client/css/styles.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo-section">
+          <img
+            src="client/images/index-imgs/lily-be-clean.png"
+            alt="Lily Be Clean Logo"
+            class="logo"
+          />
+          <span class="brand-name">Lily Be Clean</span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="client/html/services.html">Services</a>
+          <a href="#booking">Booking</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
 
-      <nav class="nav-links">
+      <div class="mobile-menu" id="mobileMenu">
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Booking</a>
-      </nav>
-
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
+        <a href="client/html/services.html">Services</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
+    </header>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-content standout-text">
-        <h1>Come Home to Clean</h1>
-        <p>Serving St. George with reliable, friendly home cleaning — Lily Be Clean makes your space feel fresh and stress-free.</p>
-        <a href="#" class="hero-btn">Shop Now</a>
-      </div>
-    </div>
-  </section>
-
-  <main>
-    <!-- About Section -->
-    <section class="about-section">
-      <div class="container about-flex">
-        <div class="about-text">
-          <h2>About Lily Be Clean</h2>
+    <!-- Intro Section -->
+    <section class="intro-section">
+      <div class="intro-container">
+        <div class="intro-image">
+          <img
+            src="client/images/index-imgs/home-lily.webp"
+            alt="Lily Be Clean Intro Image"
+          />
+        </div>
+        <div class="intro-text">
+          <h1>Clean Space Clear Mind</h1>
           <p>
-            Hi, I’m Lily Be McCammon — founder of Lily Be Clean and passionate believer in the power of a tidy space. I’m a movie lover, a people person, and someone who truly values the comfort of home.
+            We believe that a clean environment isn't just about appearance —
+            it's about peace, clarity, and comfort. Let us bring that calm into
+            your home.
           </p>
+          <a href="#booking" class="intro-btn">Book a Cleaning</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- About Section -->
+      <section class="about-section" id="about">
+        <div class="container about-flex">
+          <div class="about-text">
+            <h2>Meet Lily</h2>
+            <p>
+              I'm Lily Be McCammon — founder of Lily Be Clean, movie lover, and
+              passionate believer in the power of a tidy space. My mission? To
+              make your home feel calm, refreshed, and recharged.
+            </p>
+            <p>
+              Based in St. George, Utah, I proudly transform homes and
+              businesses into spotless, peaceful spaces that support your
+              lifestyle and well-being.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="client/images/index-imgs/lily-about-image.webp"
+              alt="Lily Be McCammon, founder of Lily Be Clean"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="carousel-section" id="services">
+        <h2>Here's Our Work</h2>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="client/images/index-imgs/slide1.webp" alt="Slide 1" />
+            </div>
+            <div class="carousel-slide">
+              <img src="client/images/index-imgs/slide2.webp" alt="Slide 2" />
+            </div>
+            <div class="carousel-slide">
+              <img src="client/images/index-imgs/slide3.webp" alt="Slide 3" />
+            </div>
+            <div class="carousel-slide">
+              <img src="client/images/index-imgs/slide4.webp" alt="Slide 4" />
+            </div>
+          </div>
+          <button class="carousel-button prev">&#10094;</button>
+          <button class="carousel-button next">&#10095;</button>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <div class="container">
+          <h2>Client Testimonials</h2>
+          <div class="testimonials-grid">
+            <blockquote>
+              <p>
+                "I highly recommend Lily McCammon of Lily Be Clean for her
+                excellent service cleaning my home. After searching for a
+                cleaning service for several weeks with no success at receiving
+                any callbacks , Lily answered my call within a timely manner.
+                She is pleasant and professional, shows up on time and does a
+                super job cleaning my home. I couldn’t be happier with her
+                service."
+              </p>
+              <cite>– Joyce, Ivans UT</cite>
+            </blockquote>
+            <blockquote>
+              <p>
+                "Lily is a very conscientious, honest and hard working young
+                lady! She is totally honest, punctual and reliable. She has
+                started her own business and is the only one who cleans so you
+                always know who has been in your house. I highly recommend her!"
+              </p>
+              <cite>– Christine, St. George UT</cite>
+            </blockquote>
+            <blockquote>
+              <p>
+                "We love Lily! She is pleasant, a hard worker and is willing to
+                do whatever needs to be done. Lily does the job in an efficient
+                and timely manner!"
+              </p>
+              <cite>– Jolene, St. George UT</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <h2>Get in Touch</h2>
           <p>
-            Lily Be Clean was born from a simple mission: to help people feel calm, refreshed, and recharged in their own homes. Based in St. George, Utah, I proudly serve the local community and surrounding areas — transforming homes and businesses into clean, peaceful spaces that support your well-being and lifestyle.
+            Reach out to me and let me know if there is anything I can do for
+            you
+          </p>
+          <form class="contact-form">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="How can we help?"
+              rows="5"
+              required
+            ></textarea>
+            <button class="contact-btn" type="submit">Send Message</button>
+          </form>
+          <p class="form-disclaimer">
+            You may receive marketing and promotional materials. Contact the
+            merchant for their privacy practices.
+            <br />
+            This form is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy" target="_blank"
+              >Privacy Policy</a
+            >
+            and
+            <a href="https://policies.google.com/terms" target="_blank"
+              >Terms of Service</a
+            >
+            apply.
           </p>
         </div>
-        <div class="about-image">
-          <img src="client/images/lily-about-image.webp" alt="Lily Be McCammon, founder of Lily Be Clean" />
+      </section>
+    </main>
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Left side (nav + newsletter) -->
+        <div class="footer-left">
+          <div class="footer-nav">
+            <ul>
+              <li><a href="client/html/services.html">Services</a></li>
+              <li><a href="#booking">Booking</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p>Subscribe for promotions & updates:</p>
+            <form
+              class="newsletter-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right side (social media) -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="client/images/icons/instagram.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="client/images/icons/facebook (1).svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              aria-label="TikTok"
+            >
+              <img src="client/images/icons/tiktok.svg" alt="TikTok" />
+            </a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Cleaning Examples / Gallery -->
-    <section class="gallery-section">
-      <div class="container">
-        <h2>Our Work</h2>
-        <div class="gallery-grid">
-          <img src="images/clean1.jpg" alt="Sparkling kitchen" />
-          <img src="images/clean2.jpg" alt="Freshly made bed" />
-          <img src="images/clean3.jpg" alt="Organized living room" />
-          <img src="images/clean4.jpg" alt="Clean bathroom" />
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Lily Be Clean. All rights reserved.</p>
       </div>
-    </section>
+    </footer>
 
-    <!-- Testimonials -->
-    <section class="testimonials-section">
-      <div class="container">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonials-grid">
-          <blockquote>
-            <p>"Lily Be Clean is incredible. I’ve never seen my house this spotless!"</p>
-            <cite>– Amanda R., St. George</cite>
-          </blockquote>
-          <blockquote>
-            <p>"Reliable, friendly, and so detail-oriented. Highly recommend."</p>
-            <cite>– James T.</cite>
-          </blockquote>
-          <blockquote>
-            <p>"They helped me prep my house for hosting. Everything was perfect!"</p>
-            <cite>– Marissa W.</cite>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p>Ready for a cleaner, calmer space? Reach out to schedule your cleaning today.</p>
-        <form class="contact-form">
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email Address" required />
-          <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('open');
-    });
-  </script>
-</body>
+    <script src="client/js/index.js"></script>
+  </body>
 </html>

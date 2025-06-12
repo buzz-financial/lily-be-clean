@@ -385,13 +385,22 @@ body {
   padding: 4rem 2rem;
 }
 
+.pricing-header {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-dark);
+  letter-spacing: 1px;
+}
+
 .pricing-grid {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin: 0 auto;
   max-width: 1300px;
-  gap: 0; /* remove any gaps between cards */
+  gap: 0.15rem; /* remove any gaps between cards */
 }
 
 .pricing-card {
@@ -403,6 +412,8 @@ body {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease;
+  min-height: 430px;
+  position: relative;
 }
 
 .pricing-card:hover {
@@ -412,8 +423,25 @@ body {
 
 .popular-card {
   height: 100%; /* base height inheritance */
-  min-height: 550px; /* make these center cards taller */
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  min-height: 475px; /* make these center cards taller */
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  /* border: 2px solid var(--color-hero-text); */
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  z-index: 2;
 }
 
 .pricing-card h3 {
@@ -442,10 +470,9 @@ body {
 }
 
 .plan-button {
-  background-color: var(--color-accent);
-  color: white;
+  color: var(--color-hero-text);
   padding: 0.75rem 1.5rem;
-  border: none;
+  border: 2px solid var(--color-hero-text);
   border-radius: 5px;
   font-weight: 600;
   font-size: 1rem;
@@ -455,8 +482,9 @@ body {
 }
 
 .plan-button:hover {
-  background-color: var(--color-hover);
+  background-color: var(--color-hero-text);
   transform: scale(1.05);
+  color: var(--color-light);
 }
 
 /* Responsive behavior */
@@ -476,75 +504,87 @@ body {
   }
 }
 
-/* PDF Section */
-.services-pdf {
-  background-color: #fdf9f5;
-  padding: 4rem 2rem;
+.next-steps-modern {
+  background: #fdf9f5;
+  padding: 5rem 2rem;
   text-align: center;
 }
 
-.services-pdf h2 {
+.modern-header {
   font-family: "Bebas Neue", cursive;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.pdf-download-btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.9rem 2rem;
-  /* background-color: var(--color-accent); */
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
   color: var(--color-dark);
-  font-weight: 600;
-  border-radius: 5px;
-  border: 2px solid var(--color-dark);
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s, transform 0.3s;
 }
 
-.pdf-download-btn:hover {
-  background-color: var(--color-hover);
-  transform: scale(1.05);
+.modern-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-/* CTA Section */
-.services-cta {
-  background: var(--color-light);
-  padding: 4rem 2rem;
-  text-align: center;
-  color: var(--color-hero-text);
+.modern-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  flex: 1 1 320px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
 }
 
-.services-cta h2 {
+.modern-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.15);
+}
+
+.material-symbols-outlined {
+  font-size: 4rem !important;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+}
+
+.modern-card h3 {
   font-family: "Bebas Neue", cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modern-card p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #555;
   margin-bottom: 2rem;
 }
 
-.setmore-btn {
+.modern-btn {
   display: inline-block;
-  padding: 1rem 2.5rem;
-  background-color: var(--color-accent);
-  color: white;
-  font-weight: 600;
-  font-size: 1.2rem;
+  /* background-color: var(--color-accent); */
+  color: var(--color-hero-text);
+  border: 2px solid var(--color-hero-text);
+  padding: 0.9rem 2rem;
   border-radius: 5px;
-  border: 2px solid var(--color-dark);
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.setmore-btn:hover {
-  background-color: var(--color-hover);
+.modern-btn:hover {
+  background-color: var(--color-hero-text);
+  color: var(--color-light);
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Responsive Tweaks */
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
+  .modern-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }

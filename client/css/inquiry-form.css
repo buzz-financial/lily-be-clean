@@ -1,0 +1,85 @@
+.inquiry-section {
+  background: var(--color-light);
+  padding: 5rem 2rem;
+  color: var(--color-dark);
+  font-family: var(--font-main);
+}
+
+.inquiry-section h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.inquiry-section p {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.inquiry-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-main);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  font-family: var(--font-main);
+}
+
+.inquiry-submit {
+  background: var(--color-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 8px;
+  margin: 2rem auto 0;
+  display: block;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.inquiry-submit:hover {
+  background: var(--color-hover);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

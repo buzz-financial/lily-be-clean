@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inquiry Form | Lily Be Clean</title>
+    <link rel="stylesheet" href="../css/inquiry-form.css" />
+  </head>
+  <body>
+    <section class="inquiry-section">
+      <div class="container">
+        <h2>Request a Quote or Walkthrough</h2>
+        <p>
+          Please fill out a few details so we can create a custom cleaning plan
+          for your home or business.
+        </p>
+
+        <form
+          class="inquiry-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceType">Service Type *</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Select</option>
+              <option>Walkthrough / Quote</option>
+              <option>Basic Cleaning</option>
+              <option>Deep Cleaning</option>
+              <option>Move In/Out</option>
+              <option>Add-Ons / Special Services</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bedrooms">Bedrooms</label>
+              <input type="number" id="bedrooms" name="bedrooms" min="0" />
+            </div>
+
+            <div class="form-group">
+              <label for="bathrooms">Bathrooms</label>
+              <input type="number" id="bathrooms" name="bathrooms" min="0" />
+            </div>
+
+            <div class="form-group">
+              <label for="squareFootage">Square Footage</label>
+              <input type="text" id="squareFootage" name="squareFootage" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="frequency">Cleaning Frequency</label>
+            <select id="frequency" name="frequency">
+              <option value="">Select</option>
+              <option>One-Time</option>
+              <option>Weekly</option>
+              <option>Bi-Weekly</option>
+              <option>Monthly</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Additional Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              placeholder="Special requests, pets, access notes, etc."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="inquiry-submit">Submit Inquiry</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

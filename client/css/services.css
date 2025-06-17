@@ -241,18 +241,18 @@ body {
 .footer-social {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  /* gap: 1rem; */
   align-items: center;
 }
 
 .social-icons {
   display: flex;
-  gap: 3rem;
+  /* gap: 3rem; */
 }
 
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 150px;
+  height: auto;
   transition: transform 0.3s ease;
 }
 

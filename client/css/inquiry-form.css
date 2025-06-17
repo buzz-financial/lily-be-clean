@@ -1,26 +1,48 @@
+:root {
+  --color-light: #f3f3ee;
+  --color-dark: #282120;
+  --color-accent: #a39887;
+  --color-hover: #c8c0b6;
+  --color-hero-text: #2c2c28;
+  --font-main: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
 .inquiry-section {
   background: var(--color-light);
-  padding: 5rem 2rem;
-  color: var(--color-dark);
-  font-family: var(--font-main);
+  padding: 6rem 1rem 5rem;
 }
 
 .inquiry-section h2 {
   font-family: "Bebas Neue", cursive;
   font-size: 2.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
+  color: var(--color-dark);
+  letter-spacing: 1px;
 }
 
 .inquiry-section p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   text-align: center;
   margin-bottom: 3rem;
   color: #555;
 }
 
 .inquiry-form {
-  max-width: 1000px;
+  max-width: 950px;
   margin: 0 auto;
   background: #fff;
   padding: 3rem 2rem;
@@ -31,8 +53,8 @@
 .form-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .form-group {
@@ -43,7 +65,7 @@
 
 .form-group label {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.5rem;
   font-family: var(--font-main);
 }
@@ -51,12 +73,25 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
   background-color: #fafafa;
   font-family: var(--font-main);
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
 }
 
 .inquiry-submit {
@@ -67,10 +102,11 @@
   padding: 1rem 3rem;
   border: none;
   border-radius: 8px;
-  margin: 2rem auto 0;
+  margin: 3rem auto 0;
   display: block;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  font-family: var(--font-main);
 }
 
 .inquiry-submit:hover {
@@ -78,8 +114,32 @@
   transform: scale(1.05);
 }
 
+@media (max-width: 1024px) {
+  .inquiry-form {
+    padding: 2.5rem 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .inquiry-section {
+    padding: 4rem 1rem 4rem;
+  }
+
+  .inquiry-section h2 {
+    font-size: 2.3rem;
+  }
+
+  .inquiry-section p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
   .form-row {
     flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
   }
 }
